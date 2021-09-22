@@ -1,0 +1,2 @@
+class Possuvideo < ApplicationRecord
+end
