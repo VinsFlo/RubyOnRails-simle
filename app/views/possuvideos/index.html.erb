@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Possuvideos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Video</th>
+      <th>Tittle</th>
+      <th>Star</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @possuvideos.each do |possuvideo| %>
+      <tr>
+        <td><%= possuvideo.image %></td>
+        <td><%= possuvideo.video %></td>
+        <td><%= possuvideo.tittle %></td>
+        <td><%= possuvideo.star %></td>
+        <td><%= possuvideo.description %></td>
+        <td><%= link_to 'Show', possuvideo %></td>
+        <td><%= link_to 'Edit', edit_possuvideo_path(possuvideo) %></td>
+        <td><%= link_to 'Destroy', possuvideo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Possuvideo', new_possuvideo_path %>
