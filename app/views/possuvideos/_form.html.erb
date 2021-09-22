@@ -11,32 +11,31 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
+  <div class="form-group">
+    
+    <%= form.text_field :image, placeholder: "Изображение", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    
+    <%= form.text_field :video, placeholder: "Видео", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    
+    <%= form.text_field :tittle, placeholder: "Название", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    
+    <%= form.number_field :star, placeholder: "Рейтинг", class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :video %>
-    <%= form.text_field :video %>
+    
+    <%= form.text_area :description, placeholder: "Описание", length: "800", class: "form-control" %>
   </div>
+  <button type="submit" class="btn btn-primary">Сохранить</button>
+  <%= link_to "Открыть все видео", possuvideos_path, class:"btn btn-secondary" %>
 
-  <div class="field">
-    <%= form.label :tittle %>
-    <%= form.text_field :tittle %>
-  </div>
-
-  <div class="field">
-    <%= form.label :star %>
-    <%= form.number_field :star %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
