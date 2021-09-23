@@ -2,14 +2,12 @@
 
 <h1>Possuvideos</h1>
 
-<table>
+<%= link_to 'Загрузить нового опоссума', new_possuvideo_path, class:"btn btn-primary" %>
+
+<table class:"table table-bordless">
   <thead>
     <tr>
-      <th>Image</th>
-      <th>Video</th>
-      <th>Tittle</th>
-      <th>Star</th>
-      <th>Description</th>
+      <th>Название</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,19 +15,21 @@
   <tbody>
     <% @possuvideos.each do |possuvideo| %>
       <tr>
-        <td><%= possuvideo.image %></td>
-        <td><%= possuvideo.video %></td>
-        <td><%= possuvideo.tittle %></td>
-        <td><%= possuvideo.star %></td>
-        <td><%= possuvideo.description %></td>
-        <td><%= link_to 'Show', possuvideo %></td>
-        <td><%= link_to 'Edit', edit_possuvideo_path(possuvideo) %></td>
-        <td><%= link_to 'Destroy', possuvideo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td><%= link_to possuvideo.tittle, possuvideo %></td>
+        <td>
+			<%= link_to edit_possuvideo_path(possuvideo) do %>
+				<i class="fas fa-pen"></i>
+				<% end %>	
+		</td>
+		<td>		
+            <%= link_to possuvideo, method: :delete, data: { confirm: 'Are you sure?' } do %>
+				<i class="fas fa-trash"></i>
+				<% end %>
+		</td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Possuvideo', new_possuvideo_path %>
+
