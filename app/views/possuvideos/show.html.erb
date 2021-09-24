@@ -1,29 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @possuvideo.image %>
-</p>
-
-<p>
-  <strong>Video:</strong>
-  <%= @possuvideo.video %>
-</p>
-
-<p>
-  <strong>Tittle:</strong>
-  <%= @possuvideo.tittle %>
-</p>
-
-<p>
-  <strong>Star:</strong>
-  <%= @possuvideo.star %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @possuvideo.description %>
-</p>
-
-<%= link_to 'Edit', edit_possuvideo_path(@possuvideo) %> |
-<%= link_to 'Back', possuvideos_path %>
+<div class="card mb-3" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <%= image_tag @possuvideo.image, class: "card-img"  %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= @possuvideo.tittle %></h5>
+        <p class="card-text"><%= @possuvideo.description  %></p>
+      </div>
+    </div>
+  </div>
+</div>
