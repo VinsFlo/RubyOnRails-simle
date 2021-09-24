@@ -6,6 +6,9 @@
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title"><%= @possuvideo.tittle %></h5>
+		<% (1..@possuvideo.star).each do %>
+			<i class="fas fa-star"></i>
+		<% end %>
         <p class="card-text"><%= @possuvideo.description  %></p>
       </div>
     </div>
