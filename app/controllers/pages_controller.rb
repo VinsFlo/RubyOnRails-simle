@@ -4,4 +4,9 @@ class PagesController < ApplicationController
 
   def location
   end
+
+  def home
+	@possuvideos = Possuvideo.all
+
+  end
 end

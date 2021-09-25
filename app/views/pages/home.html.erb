@@ -1,0 +1,19 @@
+<br>
+<div class="row">
+	<% @possuvideos.each do |possuvideo| %>
+		<div class="col-md-4">
+		<div class: "card">
+			<%= link_to possuvideo do %>
+				<%= image_tag possuvideo.image, class: "card-img-top" %>
+			<% end %>
+			<div class: "card-body">
+				<h5 class:"card-title" ><%= possuvideo.tittle %></h5>
+				<% (1..possuvideo.star).each do %>
+				<i class="fas fa-star"></i>
+				<% end %>
+				<p class:"card-text"><%= possuvideo.description %></p>
+				</div>
+			</div>
+		</div>
+	<% end %>	
+<div>
