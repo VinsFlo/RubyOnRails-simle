@@ -20,12 +20,12 @@
 <div class="card mb-3" >
   <div class="row g-0">
     <div class="col-md-4">
-      <%= image_tag @possuvideo.image, class: "card-img"  %>
+      <%= image_tag @possuvideo.cover, class: "card-img"  %>
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title"><%= @possuvideo.tittle %></h5>
-		<% (1..@possuvideo.star).each do %>
+		<% (1..@possuvideo.star_number).each do %>
 			<i class="fas fa-star"></i>
 		<% end %>
         <p class="card-text"><%= @possuvideo.description  %></p>
