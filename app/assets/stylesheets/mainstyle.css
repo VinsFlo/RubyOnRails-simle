@@ -1,0 +1,9 @@
+.card-img-top {
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover;
+}
+
+.special .card-body {
+  flex-grow: 0;
+}
