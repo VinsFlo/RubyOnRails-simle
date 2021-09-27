@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def home
-	@possuvideos = Possuvideo.all
+	@possuvideos = Possuvideo.where(public: 1);
 
   end
 end

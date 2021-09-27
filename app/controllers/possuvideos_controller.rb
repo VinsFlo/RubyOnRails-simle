@@ -64,6 +64,6 @@ class PossuvideosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def possuvideo_params
-      params.require(:possuvideo).permit(:image, :video, :tittle, :star, :description)
+      params.require(:possuvideo).permit(:image, :video, :tittle, :star, :public, :description)
     end
 end

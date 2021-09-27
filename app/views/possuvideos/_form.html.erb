@@ -35,6 +35,14 @@
     
     <%= form.text_area :description, placeholder: "Описание", length: "800", class: "form-control" %>
   </div>
+
+  <div class="form-check">
+	<%= form.check_box :public, id: :public, class: "form-check-input" %>
+	<label for="public" class="form-check-label">Опубликовать?</label>
+  </div>
+
+  <br>
+
   <button type="submit" class="btn btn-primary">Сохранить</button>
   <%= link_to "Открыть все видео", possuvideos_path, class:"btn btn-secondary" %>
 
